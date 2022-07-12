@@ -1,0 +1,11 @@
+body {
+    background:#fff;
+    background-attachment:fixed;
+    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur),
+        default;
+}
+a,
+img {
+    cursor:url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur),
+        default;
+}
