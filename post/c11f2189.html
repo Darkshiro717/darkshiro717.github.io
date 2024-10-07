@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>白盒demo演示——新手教程和滑翔关 | 阿白の灵感小屋</title><meta name="author" content="阿白( ´ ▽ ` )ﾉ"><meta name="copyright" content="阿白( ´ ▽ ` )ﾉ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、设计目的设计一段关卡流程，引导玩家从山脚村庄前往山顶。在过程中学习基本的的游戏操作（移动、探索和滑翔的交互规则），来到山顶时完成新手教学，开启新的游戏目标。 二、期望效果完成移动、滑翔、交互的教学，并使用以上玩法元素完成一个初步的关卡流程。 三、流程介绍背景玩家是梦想征服每一座高山的冒险家，将在旅途中一边收集星之力量一边登上山顶。本流程是玩家开始旅程的第一站。 流程开场动画后，玩家醒来并进行移">
+<meta property="og:type" content="article">
+<meta property="og:title" content="白盒demo演示——新手教程和滑翔关">
+<meta property="og:url" content="https://darkshiro717.github.io/post/c11f2189.html">
+<meta property="og:site_name" content="阿白の灵感小屋">
+<meta property="og:description" content="一、设计目的设计一段关卡流程，引导玩家从山脚村庄前往山顶。在过程中学习基本的的游戏操作（移动、探索和滑翔的交互规则），来到山顶时完成新手教学，开启新的游戏目标。 二、期望效果完成移动、滑翔、交互的教学，并使用以上玩法元素完成一个初步的关卡流程。 三、流程介绍背景玩家是梦想征服每一座高山的冒险家，将在旅途中一边收集星之力量一边登上山顶。本流程是玩家开始旅程的第一站。 流程开场动画后，玩家醒来并进行移">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://darkshiro717.github.io/img/20241002/test_level_picture.png">
+<meta property="article:published_time" content="2024-10-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-07T11:43:11.840Z">
+<meta property="article:author" content="阿白( ´ ▽ &#96; )ﾉ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://darkshiro717.github.io/img/20241002/test_level_picture.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://darkshiro717.github.io/post/c11f2189"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '白盒demo演示——新手教程和滑翔关',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-07 19:43:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mouse.css"><link rel="stylesheet" href="/css/one.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/20241002/test_level_picture.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">阿白の灵感小屋</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">白盒demo演示——新手教程和滑翔关</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-01T16:00:00.000Z" title="发表于 2024-10-02 00:00:00">2024-10-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-07T11:43:11.840Z" title="更新于 2024-10-07 19:43:11">2024-10-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/demo%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA/">demo效果演示</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="白盒demo演示——新手教程和滑翔关"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、设计目的"><a href="#一、设计目的" class="headerlink" title="一、设计目的"></a>一、设计目的</h2><p>设计一段关卡流程，引导玩家从山脚村庄前往山顶。在过程中学习基本的的游戏操作（移动、探索和滑翔的交互规则），来到山顶时完成新手教学，开启新的游戏目标。</p>
+<h2 id="二、期望效果"><a href="#二、期望效果" class="headerlink" title="二、期望效果"></a>二、期望效果</h2><p>完成移动、滑翔、交互的教学，并使用以上玩法元素完成一个初步的关卡流程。</p>
+<h2 id="三、流程介绍"><a href="#三、流程介绍" class="headerlink" title="三、流程介绍"></a>三、流程介绍</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>玩家是梦想征服每一座高山的冒险家，将在旅途中一边收集星之力量一边登上山顶。本流程是玩家开始旅程的第一站。</p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p><strong>开场动画</strong>后，玩家醒来并进行移动（<strong>移动教学</strong>），在村子的入口处遇到村民npc（<strong>与npc交互教学</strong>），npc告知玩家可以询问村长。</p>
+<p>玩家来到村庄寻找村长，需登上村庄中心的屋子（<strong>考验</strong>），村长建议想要登上山顶，需要滑翔伞（<strong>能力</strong>）。而滑翔伞存放在仓库塔顶中，玩家需要自己去取。玩家接到<strong>任务</strong>，需要前往仓库（<strong>详细关卡</strong>）获得滑翔伞。（引入攻击小怪、跳板、按钮<strong>机制</strong>）。</p>
+<p>得到滑翔伞后解锁滑翔能力，玩家使用滑翔能力登上山顶。（引入上升气流、踩一下会消失的云<strong>机制</strong>）。</p>
+<p>登上山顶后初步新手流程结束，开始新的旅程。</p>
+<h3 id="预估时间"><a href="#预估时间" class="headerlink" title="预估时间"></a>预估时间</h3><p>开场动画（2分钟）——移动和交互教学（3分钟）——寻找村长（3分钟）——村庄自由探索（5分钟）——仓库探索（2分钟）——交付任务（1分钟）——得到滑翔伞后登山（3分钟）——过场动画（1分钟）——新旅程开始</p>
+<p>流程图如下：<img src="/img/20241002/learning.png" alt="新手教程" style="zoom:50%;" /></p>
+<h2 id="四、整体环境"><a href="#四、整体环境" class="headerlink" title="四、整体环境"></a>四、整体环境</h2><p>平和、温馨、富有生机的被山簇拥着的村庄，以绿色为主色调，村庄以村长所在的较高的屋子为中心，周围散落着其他屋子，村子背靠需要玩家攀登的山。村中的塔楼连通地下仓库。</p>
+<p>纵向结构：从低到高依次为仓库（关卡）、山脚村庄、高山。</p>
+<p>整体布局参考图：（p1、p3、p4图源pinterest，p2为旷野之息游戏截图）</p>
+<img src="/img/20241002/structure_refer.jpg" alt="整体结构参考" />
+
+<p>村庄参考《塞尔达传说旷野之息》卡卡利特村、《剑灵》海树村</p>
+<h2 id="五、详细点位"><a href="#五、详细点位" class="headerlink" title="五、详细点位"></a>五、详细点位</h2><h3 id="1、地下仓库"><a href="#1、地下仓库" class="headerlink" title="1、地下仓库"></a>1、地下仓库</h3><p>地下仓库为箱庭式关卡，在该地区引入跳板、怪物、火门—按钮机关机制。</p>
+<p>参考图《TUNIC》阴沟之下和青蛙领地：</p>
+<img src="/img/20241002/storehouse_refer.jpg" alt="地下仓库参考" />
+
+<h4 id="地下仓库动线"><a href="#地下仓库动线" class="headerlink" title="地下仓库动线"></a>地下仓库动线</h4><img src="/img/20241002/storehouse_routine.jpg" alt="地下仓库路线" style="zoom:50%;" />
+
+<h4 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h4><img src="/img/20241002/1.png" alt="1" style="zoom:50%;" />
+
+<p>路线<strong>引导</strong>：起点处用地面和墙面的箭头引导玩家前进的方向。</p>
+<p>进入游戏眼前能看到木牌，很自然靠近看到操作说明，且靠近时操作说明自动展开，远离时自动折叠。</p>
+<p>收集物的摆放：用金币的弧度<strong>鼓励</strong>玩家完成完美的跳跃。</p>
+<img src="/img/20241002/2.png" alt="2" style="zoom:50%;" />
+
+<p><strong>奖励</strong>的升级：第一个台阶的奖励放了金币，第二个台阶进行升级，用未知的盒子引起玩家的好奇心。</p>
+<p>新机制的引入：引入火门机关，并将控制开关和箱子放在火门前进行<strong>教学</strong>，让玩家学会举起箱子压住开关。并且给开关设置了特殊音效，让玩家操作开关时得到正反馈。</p>
+<img src="/img/20241002/3.png" alt="3" style="zoom:50%;" />
+
+<p>有了前面的引入，玩家自然联想到关闭火门需要寻找开关，进入右侧房间，完成机关解谜的<strong>考验</strong>。</p>
+<img src="/img/20241002/4.png" alt="4" style="zoom:50%;" />
+
+<p>路线引导用箭头指示按钮和箱子位置，让玩家建立目标。当玩家越过拿到箱子时可以直接跳到开关上，避免了重复路线。</p>
+<p><strong>难度规划</strong>：引入新机制跳板（跳板随着玩家的跳跃而改变），用单一跳板让玩家熟悉跳板机制，之后需要跳过两个跳板，让玩家熟悉并练习跳板机制，关卡后续还有多跳板组合，难度逐步上升。</p>
+<img src="/img/20241002/5.png" alt="5" style="zoom:30%;" />
+
+<p>补救措施：当玩家出现失误掉落后，在地面增加黄色弹簧补救措施。</p>
+<img src="/img/20241002/6.png" alt="6" style="zoom:50%;" />
+
+<p>当玩家解开谜题越过火门后，立即给予星星作为<strong>奖励</strong>，并给出存档点</p>
+<p>同时设置一个landmark<strong>地标</strong>作为该区域中心，接下来将出现岔路。</p>
+<img src="/img/20241002/7.png" alt="7" style="zoom:40%;" />
+
+<p>给玩家提供选择，可以直接走跳板路径更快通关，也可以选择高台路径进行额外收集。</p>
+<img src="/img/20241002/8.png" alt="8" style="zoom:40%;" />
+
+<p>这里是多组跳板的组合，是对跳板机制的考验，然后用金币和箭头引导玩家，乘坐升降电梯前往地上部分。</p>
+<h3 id="2、乘风而上的登山"><a href="#2、乘风而上的登山" class="headerlink" title="2、乘风而上的登山"></a>2、乘风而上的登山</h3><p>参考《蔚蓝》：</p>
+<img src="/img/20241002/24.png" alt="24" style="zoom:30%;" />
+
+<p>出乘坐电梯后来到地上部分，这部分主要的内容是爬山，所以<strong>动线</strong>设置上契合爬山主题，曲折向上。</p>
+<h4 id="动线设计"><a href="#动线设计" class="headerlink" title="动线设计"></a>动线设计</h4><img src="/img/20241002/climbingroutine.png" alt="爬山动线设计" style="zoom:50%;" />
+
+<h4 id="详细设计-1"><a href="#详细设计-1" class="headerlink" title="详细设计"></a>详细设计</h4><img src="/img/20241002/9.png" alt="9" style="zoom:30%;" />
+
+<p>玩家乘坐电梯来到地上，立刻就能捡到滑翔伞解锁滑翔能力，并且能看到全景，看到最高处将要前往的目标。</p>
+<img src="/img/20241002/10.png" alt="10" style="zoom:40%;" />
+
+<p>给玩家一个较高的起点，方便玩家使用滑翔能力前进。并且放置很多上升气流，符合环境，也方便玩家通过气流上升进行滑翔。</p>
+<img src="/img/20241002/11.png" alt="11" style="zoom:40%;" />
+
+<p>为爬上引入新的踩上去后会消失的云（用方块表示），同样采用单一方块进行引入，让玩家熟悉后放置多个方块。</p>
+<img src="/img/20241002/12.png" alt="12" style="zoom:30%;" />
+
+<p>最后接近终点，通过建筑复杂度给玩家一定的仪式感。</p>
+<h2 id="六、部分数据设定"><a href="#六、部分数据设定" class="headerlink" title="六、部分数据设定"></a>六、部分数据设定</h2><h3 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h3><p>地图大小：100*100</p>
+<p>地图高度：105</p>
+<h3 id="人物"><a href="#人物" class="headerlink" title="人物"></a>人物</h3><p>最大生命值（maxHealth）：3</p>
+<p>重力（gravity）：38f</p>
+<p>跌落重力（fallgravity）：65f</p>
+<p>重力最大加速度（gravityTopSpeed）：50f</p>
+<p>跑步加速（runningAcceleration）：16f</p>
+<p>跑步最大速度（runningTopSpeed）：7.5f</p>
+<p>跑步转向摩擦（runningTurningDrag）：14f</p>
+<p>可跳跃次数（multiJumps）：1</p>
+<p>最大跳跃高度（maxJumpHeight）: 17f</p>
+<p>最小跳跃高度（minJumpHeight）: 10f</p>
+<p>滑翔重力（glidingGravity）: 10f</p>
+<p>滑翔最大下降速度（glidingMaxFallSpeed）: 2f</p>
+<p>滑翔转向摩擦（glidingTurningDrag）: 8f</p>
+<h3 id="场景机制"><a href="#场景机制" class="headerlink" title="场景机制"></a>场景机制</h3><p>电梯速度（MovingPlatformSpeed）：8f</p>
+<p>电梯等待时间（MovingPlatformWaitTime）：3</p>
+<p>弹簧力（SpringForce）：28f</p>
+<p>向上气流力（gravityFieldForce）：70f</p>
+<p>消失云消失延迟（FallingPlatformFallDelay）：1、1.5</p>
+<p>消失云重新生成延迟（FallingPlatformResetDelay）：4</p>
+<h3 id="史莱姆"><a href="#史莱姆" class="headerlink" title="史莱姆"></a>史莱姆</h3><p>接触伤害（contactDamage）：1</p>
+<p>发现范围（spotRange）: 5f</p>
+<p>视野范围（viewRange）: 8f</p>
+<p>跟随加速（followAcceleration）: 10f</p>
+<p>跟随最高速度（followTopSpeed）: 4f</p>
+<h2 id="七、视频演示和试玩下载"><a href="#七、视频演示和试玩下载" class="headerlink" title="七、视频演示和试玩下载"></a>七、视频演示和试玩下载</h2><p>由于视频大小限制，这里只放出快速跑图版本的视频演示：（由于github连接不太稳定，如加载不出可以选择下载，约87mb）</p>
+<p><video src="/video/paperdemo/sutongver.mp4" position= "absolute" width="100%" height="100%" controls="controls"></video></p>
+<p>本demo已打包成.exe可执行文件，可直接下载：</p>
+<p>通过百度网盘分享的文件：paperdemo.zip<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/11GZkN-9fyFU5nkeGwiEPzA?pwd=ikrj">https://pan.baidu.com/s/11GZkN-9fyFU5nkeGwiEPzA?pwd=ikrj</a><br>提取码：ikrj<br>–来自百度网盘超级会员V1的分享</p>
+<p>解压后在该目录下直接点击PaperDemo.exe即可运行。</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/20241002/test_level_picture.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/cdb1a59b.html"><img class="next-cover" src="/img/20240909/20240324170620_1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《女神异闻录5皇家版》战斗部分拆解</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">阿白( ´ ▽ ` )ﾉ</div><div class="author-info__description">爱与梦想都要棋逢对手。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">如愿以偿</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AE%BE%E8%AE%A1%E7%9B%AE%E7%9A%84"><span class="toc-number">1.</span> <span class="toc-text">一、设计目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%9C%9F%E6%9C%9B%E6%95%88%E6%9E%9C"><span class="toc-number">2.</span> <span class="toc-text">二、期望效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%B5%81%E7%A8%8B%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">三、流程介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">3.1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B"><span class="toc-number">3.2.</span> <span class="toc-text">流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E4%BC%B0%E6%97%B6%E9%97%B4"><span class="toc-number">3.3.</span> <span class="toc-text">预估时间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%95%B4%E4%BD%93%E7%8E%AF%E5%A2%83"><span class="toc-number">4.</span> <span class="toc-text">四、整体环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AF%A6%E7%BB%86%E7%82%B9%E4%BD%8D"><span class="toc-number">5.</span> <span class="toc-text">五、详细点位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%9C%B0%E4%B8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">5.1.</span> <span class="toc-text">1、地下仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%B0%E4%B8%8B%E4%BB%93%E5%BA%93%E5%8A%A8%E7%BA%BF"><span class="toc-number">5.1.1.</span> <span class="toc-text">地下仓库动线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1"><span class="toc-number">5.1.2.</span> <span class="toc-text">详细设计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%B9%98%E9%A3%8E%E8%80%8C%E4%B8%8A%E7%9A%84%E7%99%BB%E5%B1%B1"><span class="toc-number">5.2.</span> <span class="toc-text">2、乘风而上的登山</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E7%BA%BF%E8%AE%BE%E8%AE%A1"><span class="toc-number">5.2.1.</span> <span class="toc-text">动线设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1-1"><span class="toc-number">5.2.2.</span> <span class="toc-text">详细设计</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E9%83%A8%E5%88%86%E6%95%B0%E6%8D%AE%E8%AE%BE%E5%AE%9A"><span class="toc-number">6.</span> <span class="toc-text">六、部分数据设定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%B0%E5%9B%BE"><span class="toc-number">6.1.</span> <span class="toc-text">地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E7%89%A9"><span class="toc-number">6.2.</span> <span class="toc-text">人物</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E6%9C%BA%E5%88%B6"><span class="toc-number">6.3.</span> <span class="toc-text">场景机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B2%E8%8E%B1%E5%A7%86"><span class="toc-number">6.4.</span> <span class="toc-text">史莱姆</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%A7%86%E9%A2%91%E6%BC%94%E7%A4%BA%E5%92%8C%E8%AF%95%E7%8E%A9%E4%B8%8B%E8%BD%BD"><span class="toc-number">7.</span> <span class="toc-text">七、视频演示和试玩下载</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/c11f2189.html" title="白盒demo演示——新手教程和滑翔关"><img src="/img/20241002/test_level_picture.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="白盒demo演示——新手教程和滑翔关"/></a><div class="content"><a class="title" href="/post/c11f2189.html" title="白盒demo演示——新手教程和滑翔关">白盒demo演示——新手教程和滑翔关</a><time datetime="2024-10-01T16:00:00.000Z" title="发表于 2024-10-02 00:00:00">2024-10-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/cdb1a59b.html" title="《女神异闻录5皇家版》战斗部分拆解"><img src="/img/20240909/20240324170620_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《女神异闻录5皇家版》战斗部分拆解"/></a><div class="content"><a class="title" href="/post/cdb1a59b.html" title="《女神异闻录5皇家版》战斗部分拆解">《女神异闻录5皇家版》战斗部分拆解</a><time datetime="2024-09-08T16:00:00.000Z" title="发表于 2024-09-09 00:00:00">2024-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/f52e069c.html" title="demo展示——Lily大冒险"><img src="/img/20240824/Lily-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="demo展示——Lily大冒险"/></a><div class="content"><a class="title" href="/post/f52e069c.html" title="demo展示——Lily大冒险">demo展示——Lily大冒险</a><time datetime="2024-08-23T16:00:00.000Z" title="发表于 2024-08-24 00:00:00">2024-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/4a17b156.html" title="Hello World"><img src="/img/wallhaven-dpr2eg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/post/4a17b156.html" title="Hello World">Hello World</a><time datetime="2022-07-10T06:00:09.017Z" title="发表于 2022-07-10 14:00:09">2022-07-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/20241002/test_level_picture.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 阿白( ´ ▽ ` )ﾉ</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script src="https://cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
